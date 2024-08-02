@@ -1,4 +1,5 @@
 <script>
+	import SvelteMarkdown from 'svelte-markdown';
 	import { useChat } from '@ai-sdk/svelte';
 
 	const { input, handleSubmit, messages } = useChat();
@@ -88,7 +89,7 @@
 					{#if message.role !== 'user'}
 						<div class="flex items-end gap-2">
 							<div class="rounded-lg bg-zinc-200 p-2">
-								<p class="text-sm">
+								<p class="text-sm prose lg:prose-xl">
 									{message.content}
 								</p>
 							</div>
@@ -97,7 +98,7 @@
 						<div class="flex items-end gap-2 justify-end">
 							<div class="rounded-lg bg-blue-500 text-white p-2">
 								<p class="text-sm">
-									{message.content}
+									<SvelteMarkdown source={message.content} />
 								</p>
 							</div>
 						</div>

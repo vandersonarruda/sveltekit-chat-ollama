@@ -15,6 +15,7 @@
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
+		"@tailwindcss/typography": "^0.5.13",
 		"@types/eslint": "^9.6.0",
 		"autoprefixer": "^10.4.20",
 		"eslint": "^9.0.0",
@@ -35,6 +36,7 @@
 	"dependencies": {
 		"@ai-sdk/svelte": "^0.0.29",
 		"ai": "^3.3.0",
-		"ollama-ai-provider": "^0.10.0"
+		"ollama-ai-provider": "^0.10.0",
+		"svelte-markdown": "^0.4.1"
 	}
 }
