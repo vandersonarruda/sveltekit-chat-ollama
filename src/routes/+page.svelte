@@ -83,14 +83,15 @@
 				</div>
 			</h2>
 		</header>
+
 		<main class="flex-1 overflow-auto p-4">
 			<div class="space-y-4">
 				{#each $messages as message}
 					{#if message.role !== 'user'}
 						<div class="flex items-end gap-2">
 							<div class="rounded-lg bg-zinc-200 p-2">
-								<p class="text-sm prose lg:prose-xl">
-									{message.content}
+								<p class="text-sm prose">
+									<SvelteMarkdown source={message.content} />
 								</p>
 							</div>
 						</div>
@@ -106,6 +107,7 @@
 				{/each}
 			</div>
 		</main>
+
 		<footer class="border-t p-4">
 			<form on:submit={handleSubmit} class="flex items-center gap-2">
 				<button
